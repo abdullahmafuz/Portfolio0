@@ -1,6 +1,86 @@
 @import url("https://fonts.googleapis.com/css?family=Great+Vibes&display=swap");
-h1 {
-  font-size: 10rem;
-  font-family: 'Great Vibes', cursive;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: #fff;
+  overflow: hidden;
+}
+
+header div {
+  z-index: 1;
+}
+
+header div ul {
+  position: relative;
+}
+
+header div ul li {
+  text-align: center;
+  list-style: none;
+}
+
+header div ul li:hover a {
+  color: #1c7eff;
+}
+
+header div ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5px 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header div ul li a::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15vw;
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  -webkit-transition: letter-spacing 0.5s,left .5s;
+  transition: letter-spacing 0.5s,left .5s;
+}
+
+header div ul li a:hover::after {
+  left: 50%;
+  opacity: 1;
+  letter-spacing: 10px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,86 @@
 
-h1{
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: 100vh;
 
-    font-size: 10rem;
-    font-family: 'Great Vibes', cursive;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
     
+    div{
+
+   z-index: 1;
+    
+    ul{
+  
+        position: relative;
+        
+       
+
+        li{
+      
+          text-align: center;
+          list-style: none;
+
+          &:hover a{
+              color: rgb(28, 126, 255);
+              
+          }
+
+          a{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 3em;
+            padding: 5px 20px;
+            display: inline-flex;
+            font-weight: 600;
+            transition: .4s;
+            
+            
+            
+            &::after{
+                content:  attr(data-text);
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15vw ;
+                color: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 500px;
+                transition: letter-spacing 0.5s,left .5s;
+                
+               
+                
+            }
+
+            &:hover::after{
+       
+                left: 50%;
+                opacity: 1;
+                letter-spacing: 10px;
+                    
+                
+            }
+
+        }
+        }
+        
+    
+       
+
+    }
 }
+
+}
+
